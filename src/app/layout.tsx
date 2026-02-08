@@ -41,8 +41,8 @@ export default function RootLayout({
               <Link href="/reliability" className="text-lg font-light">
                 Reliability
               </Link>
-              <Link href="/scala" className="text-lg font-light">
-                Scala
+              <Link href="/scale" className="text-lg font-light">
+                Scale
               </Link>
             </div>
           </nav>
