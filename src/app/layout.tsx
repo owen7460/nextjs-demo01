@@ -25,17 +25,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <header>
-        <nav className="flex justify-between items-center container mx-auto">
-          <Link href="/">Home</Link>
-          <div className="space-x-8">
-            <Link href="/performance">Performance</Link>
-            <Link href="/reliability">Reilability</Link>
-            <Link href="/scala">Scala</Link>
-          </div>
-        </nav>
-      </header>
-      <body>{children}</body>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black
+        text-white`}
+      >
+        <header className="py-4">
+          <nav className="flex justify-between items-center container mx-auto">
+            <Link href="/" className="text-2xl font-bold">
+              Home
+            </Link>
+            <div className="space-x-8">
+              <Link href="/performance" className="text-lg font-light">
+                Performance
+              </Link>
+              <Link href="/reliability" className="text-lg font-light">
+                Reliability
+              </Link>
+              <Link href="/scala" className="text-lg font-light">
+                Scala
+              </Link>
+            </div>
+          </nav>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
