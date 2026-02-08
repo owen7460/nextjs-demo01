@@ -1,6 +1,14 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+const links = [
+  { href: "/performance", label: "Performance" },
+  { href: "/reliability", label: "Reliability" },
+  { href: "/scale", label: "Scale" },
+];
 export default function Header() {
+  const pathname = usePathname();
   return (
     <>
       <header className="absolute top-0 left-0 w-full z-10 border-b border-white/90">
@@ -9,15 +17,15 @@ export default function Header() {
             Home
           </Link>
           <div className="space-x-8">
-            <Link href="/performance" className="text-lg font-light">
-              Performance
-            </Link>
-            <Link href="/reliability" className="text-lg font-light">
-              Reliability
-            </Link>
-            <Link href="/scale" className="text-lg font-light">
-              Scale
-            </Link>
+            {links.map((link) => (
+              <Link
+                href={link.href}
+                key={link.href}
+                className={`${pathname === link.href ? "border-b" : ""} text-lg font-light py-2`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         </nav>
       </header>
