@@ -1,5 +1,4 @@
 import Image from "next/image";
-import homeSrc from "../../../public/performance.jpg";
 
 export default function Performance() {
   return (
