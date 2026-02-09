@@ -9,6 +9,7 @@ export default function Home() {
           src="/bg-home.jpg"
           fill
           className="absolute -z-10 inset-0 object-cover"
+          loading="eager"
         />
         <p className="text-4xl font-bold solgan">
           Designing Experiences, Not Just Products.

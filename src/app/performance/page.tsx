@@ -9,6 +9,7 @@ export default function Performance() {
           src="/performance.jpg"
           fill
           className="absolute inset-0 object-cover"
+          loading="eager"
         />
         <p className="text-4xl font-bold solgan">
           Think Big. Start Small. Move Fast.
